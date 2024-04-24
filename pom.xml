@@ -6,11 +6,8 @@
     <artifactId>my-practice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>my-practice</name>
-    <description>my-practice</description>
-    <modules>
-        <module>mybatisplus-test</module>
-    </modules>
+    <name>practice</name>
+    <description>practice</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
