@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rainbow.practice.mybatisplustest.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.rainbow.practice.mybatisplustest.domain.User">
+            <id property="id" column="Id" jdbcType="BIGINT"/>
+            <result property="loginName" column="LoginName" jdbcType="VARCHAR"/>
+            <result property="companyName" column="CompanyName" jdbcType="VARCHAR"/>
+            <result property="linkManName" column="LinkManName" jdbcType="VARCHAR"/>
+            <result property="linkManTel" column="LinkManTel" jdbcType="VARCHAR"/>
+            <result property="roleName" column="RoleName" jdbcType="SMALLINT"/>
+            <result property="roleId" column="RoleId" jdbcType="CHAR"/>
+            <result property="userCenterId" column="UserCenterId" jdbcType="CHAR"/>
+            <result property="createdById" column="CreatedById" jdbcType="CHAR"/>
+            <result property="createdAt" column="CreatedAt" jdbcType="TIMESTAMP"/>
+            <result property="updatedById" column="UpdatedById" jdbcType="CHAR"/>
+            <result property="updatedAt" column="UpdatedAt" jdbcType="TIMESTAMP"/>
+            <result property="deletedById" column="DeletedById" jdbcType="CHAR"/>
+            <result property="deletedAt" column="DeletedAt" jdbcType="TIMESTAMP"/>
+            <result property="deleted" column="Deleted" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        Id,LoginName,CompanyName,
+        LinkManName,LinkManTel,RoleName,
+        RoleId,UserCenterId,CreatedById,
+        CreatedAt,UpdatedById,UpdatedAt,
+        DeletedById,DeletedAt,Deleted
+    </sql>
+</mapper>

@@ -86,6 +86,10 @@ auth:
   secret: s/*-.1263@
   issuer: my-practice
 
+#logging:
+#  level:
+#    com.rainbow.practice.mybatisplustest.mapper: debug
+
 
 
 

@@ -12,7 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @Description:
  */
 @Slf4j
-@MapperScan(value = {"com.rainbow.practice.mybatisplustest.**.mapper"})
+@MapperScan(value = {"com.rainbow.practice.mybatisplustest.**.mapper","com.rainbow.practice.mybatisplustest.mapper"})
 @SpringBootApplication
 public class MybatisPlusTest {
     public static void main(String[] args) {
