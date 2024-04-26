@@ -1,4 +1,4 @@
-package com.rainbow.other.mysqlview.model;
+package com.rainbow.practice.dbview.constance;
 
 /**
  * @author yanzhihao
@@ -10,6 +10,7 @@ public interface DbInfoSQL {
     String GET_TABLES = "show tables";
     String GET_DDL = "show create table ?";
     String GET_SIMPLE_COLUMNS = "describe ?";
+    String GET_DATABASE = "show databases";
 
 }
 

@@ -8,6 +8,9 @@
     <packaging>pom</packaging>
     <name>practice</name>
     <description>practice</description>
+    <modules>
+        <module>dbview</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

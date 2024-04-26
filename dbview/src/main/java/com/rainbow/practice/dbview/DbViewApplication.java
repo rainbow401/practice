@@ -13,8 +13,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 @Slf4j
 //@MapperScan(value = {"com.rainbow.practice.dbview.**.mapper","com.rainbow.practice.dbview.mapper"})
 @SpringBootApplication
-public class DbView {
+public class DbViewApplication {
     public static void main(String[] args) {
-        ConfigurableApplicationContext ctx = SpringApplication.run(DbView.class, args);
+        ConfigurableApplicationContext ctx = SpringApplication.run(DbViewApplication.class, args);
     }
 }
