@@ -25,13 +25,31 @@ spring:
 #    loadbalancer:
 #      ribbon:
 #        enabled: false
+
+
+#  datasource:
+#    # http://localhost:8080/h2-console/
+#    # url: jdbc:h2:mem:testdb
+#    url: jdbc:h2:file:./data/testdb
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: password
+
   datasource:
-    # http://localhost:8080/h2-console/
-    # url: jdbc:h2:mem:testdb
-    url: jdbc:h2:file:./data/testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/practice?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      username: root
+      password: 123456
+      auto-commit: true
+      connection-test-query: select 1
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      maximum-pool-size: 8
+      minimum-idle: 8
+      pool-name: HikariCP-financial
   h2:
     console:
       enabled: true

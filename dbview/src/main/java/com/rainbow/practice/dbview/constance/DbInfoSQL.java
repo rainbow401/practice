@@ -6,10 +6,10 @@ package com.rainbow.practice.dbview.constance;
  */
 public interface DbInfoSQL {
 
-    String GET_COLUMNS = "show full columns from ?";
+    String GET_COLUMNS = "show full columns from %s";
     String GET_TABLES = "show tables";
-    String GET_DDL = "show create table ?";
-    String GET_SIMPLE_COLUMNS = "describe ?";
+    String GET_DDL = "show create table %s";
+    String GET_SIMPLE_COLUMNS = "describe %s";
     String GET_DATABASE = "show databases";
 
 }
