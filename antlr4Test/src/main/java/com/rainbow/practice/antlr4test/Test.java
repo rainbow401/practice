@@ -15,16 +15,16 @@ public class Test {
     public static void main(String[] args) throws IOException {
 
         long start = System.currentTimeMillis();
-        String sql= "select * from user";
+        String sql= "";
         CodePointCharStream input = CharStreams.fromString(sql);
         MySqlLexer lexer = new MySqlLexer(input);  //词法分析
         CommonTokenStream tokens = new CommonTokenStream(lexer);  //转成token流
         MySqlParser parser = new MySqlParser(tokens); // 语法分析
         MySqlParser.DdlStatementContext ddlStatementContext = parser.ddlStatement();//获取某一个规则树，这里获取的是最外层的规则，也可以通过sql()获取sql规则树......
+        ddlStatementContext.accept( new MySqlParserBaseVisitor<>());
+        ddlStatementContext.createTable().getRuleContext();
         System.out.println(ddlStatementContext.toStringTree(parser)); //打印规则数
-
         long end = System.currentTimeMillis();
-
         System.out.println("(end - start) = " + (end - start));
     }
 }
